@@ -42,7 +42,20 @@ int main()
     //y = x*w
     float w = rand_float()*10.0f;
 
+    float eps = 1e-3;
+
+    //printf("%f\n", cost(w));
+    //printf("%f\n", cost(w - eps));
+    //printf("%f\n", cost(w -eps*2));
+    //using derivatives to automate this
+
+    float dcost = (cost(w + eps) - cost(w)) / eps;
+    //learning rate
+    float rate = 1e-3;
+    //finite difference(use when learning) good when nature of function is unkown
+    printf("%f\n", cost(w));
+    w -= rate*dcost;
     printf("%f\n", cost(w));
 
     return 0;    
-}
+}  
