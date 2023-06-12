@@ -2,4 +2,4 @@
 
 set -xe
 
-gcc -Wall -Werror -Wextra -pedantic -std=gnu89 main.c -o main
+gcc -Wall -Werror -Wextra -pedantic  main.c -o main
