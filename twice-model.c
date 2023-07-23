@@ -70,4 +70,4 @@ int main()
 
     printf("w = %f, b = %f\n", w, b);
     return 0;    
-}  
+} 
